@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wan.sayhello.mapper.CandidateMapper">
+
+    <insert id="insert" parameterType="cn.wan.sayhello.po.Candidate">
+        insert into candidate
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="gid != null">
+                gid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="lid != null">
+                lid,
+            </if>
+            <if test="jid != null">
+                jid,
+            </if>
+            <if test="expectId != null">
+                expectId,
+            </if>
+            <if test="dutyTime != null">
+                dutyTime,
+            </if>
+            <if test="workingYears != null">
+                workingYears,
+            </if>
+            <if test="companyCount != null">
+                companyCount,
+            </if>
+            <if test="degree != null">
+                degree,
+            </if>
+            <if test="age != null">
+                age,
+            </if>
+            <if test="historyList != null">
+                historyList,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="isSayHello != null">
+                isSayHello,
+            </if>
+            <if test="university != null">
+                university,
+            </if>
+            <if test="profession != null">
+                profession,
+            </if>
+            <if test="expectedSalary != null">
+                expectedSalary,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                #{uid,jdbcType=VARCHAR},
+            </if>
+            <if test="gid != null">
+                #{gid,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="lid != null">
+                #{lid,jdbcType=VARCHAR},
+            </if>
+            <if test="jid != null">
+                #{jid,jdbcType=VARCHAR},
+            </if>
+            <if test="expectId != null">
+                #{expectId,jdbcType=VARCHAR},
+            </if>
+            <if test="dutyTime != null">
+                #{dutyTime,jdbcType=VARCHAR},
+            </if>
+            <if test="workingYears != null">
+                #{workingYears,jdbcType=INTEGER},
+            </if>
+            <if test="companyCount != null">
+                #{companyCount,jdbcType=INTEGER},
+            </if>
+            <if test="degree != null">
+                #{degree,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                #{age,jdbcType=VARCHAR},
+            </if>
+            <if test="historyList != null">
+                #{historyList,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="isSayHello != null">
+                #{isSayHello,jdbcType=INTEGER},
+            </if>
+            <if test="university != null">
+                #{university,jdbcType=VARCHAR},
+            </if>
+            <if test="profession != null">
+                #{profession,jdbcType=VARCHAR},
+            </if>
+            <if test="expectedSalary != null">
+                #{expectedSalary,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="cn.wan.sayhello.po.Candidate">
+        UPDATE candidate
+        <set>
+            <if test="gid != null">
+                gid = #{gid,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="lid != null">
+                lid = #{lid,jdbcType=VARCHAR},
+            </if>
+            <if test="jid != null">
+                jid = #{jid,jdbcType=VARCHAR},
+            </if>
+            <if test="expectId != null">
+                expectId = #{expectId,jdbcType=VARCHAR},
+            </if>
+            <if test="dutyTime != null">
+                dutyTime = #{dutyTime,jdbcType=VARCHAR},
+            </if>
+            <if test="workingYears != null">
+                workingYears = #{workingYears,jdbcType=INTEGER},
+            </if>
+            <if test="companyCount != null">
+                companyCount = #{companyCount,jdbcType=INTEGER},
+            </if>
+            <if test="degree != null">
+                degree = #{degree,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                age = #{age,jdbcType=VARCHAR},
+            </if>
+            <if test="historyList != null">
+                historyList = #{historyList,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="isSayHello != null">
+                isSayHello = #{isSayHello,jdbcType=INTEGER},
+            </if>
+            <if test="university != null">
+                university = #{university,jdbcType=VARCHAR},
+            </if>
+            <if test="profession != null">
+                profession = #{profession,jdbcType=VARCHAR},
+            </if>
+            <if test="expectedSalary != null">
+                expectedSalary = #{expectedSalary,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where uid = #{uid,jdbcType=VARCHAR}
+    </update>
+</mapper>
